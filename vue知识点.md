@@ -24,8 +24,7 @@ Vue-admin
    v-if 是通过`display:none`控制的，而v-show是通过删除和添加控制的；
 ##### q7 过滤器的使用？
    过滤器有全局过滤器和私有过滤器，过滤器的定义方法`Vue.filter(过滤器的名称，处理函数function(规定为管道符前面的值val,){})`,调用过滤器{{msg | 过滤器1的名称（参数）｜过滤器2}}
-##### q8 $mount不知道什么意思？
-
+##### q8 $mount不知道什么意思？  new Vue({data:{},methods:{}}).$mount("#app");
 
 ##### q9 vue的生命周期函数？
    创建期间的生命周期函数
@@ -90,7 +89,8 @@ vue-resource发起jsonp请求
 @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" 
 @before-leave="beforeLeave" @leave="leave" @after-leave="afterLeave"
 
-##### q14 全局组件，私有组件，父子组件传值，ref的使用，hash监听切换组件   问题？关于组件中data必须是一个函数且必须返回一个对象
+##### q14 全局组件，私有组件，父子组件传值，ref的使用，hash监听切换组件   
+          问题？关于组件中data必须是一个函数且必须返回一个对象---- 每个实例可以维护一份被返回对象的独立的拷贝：
 定义全局组件
     `Vue.component('mycom',{
 		template:'<div><h1 @click="showMsg">{{msg}}</h1></div>'
@@ -165,6 +165,7 @@ ref可以获取组件中的数据和方法  this.$refs.mytest.data    this.$refs
 
 ##### q16 关于webpack构建工具？
 
+阅读 深入浅出webpack
 
 ##### q17 关于vue的项目经验
 
